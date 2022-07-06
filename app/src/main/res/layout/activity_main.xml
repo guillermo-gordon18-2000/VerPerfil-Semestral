@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/fondo_07042022"
+
+   >
+    <!-- Esta pantalla esta compuesta por lo siguiente  -->
+    <!-- 1 Scrollview -->
+    <!-- 3 Linearlayout -->
+    <!-- 2 Relativelauyout -->
+    <!-- 15 Controles -->
+    <!--  nomclatura de codigo -->
+    <!-- Componentes para el diseño  e imagenes  -->
+    <!-- 10 Iconos.XML -->
+    <!-- 1 Imagen compuesta por marco.xml + fondo_1_8f4af1 + ic_baseline_image_24.xml -->
+    <!-- 1 marco personalizado para el fondo blanco  -->
+    <!-- 1 marco personalizado para los editext -->
+
+
+    <!-- Solo se personalizaron 2 colores en la direccion values  (colors)  -->
+
+
+    <!-- no se a agregado nada en el java  -->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/scLogo"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="15dp"
+                android:gravity="left">
+
+                <ImageView
+                    android:id="@+id/imgLogo"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="85dp"
+                    android:src="@drawable/logo_07042022" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/Linear_1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Imgane_persona"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="128dp"
+                    android:layout_marginTop="40dp"
+
+
+
+                    />
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="190dp"
+                    android:layout_toRightOf="@+id/Imgane_persona"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+            </RelativeLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp">
+
+                <LinearLayout
+                    android:id="@+id/scCVContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="25dp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgNom"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_person_24" />
+                        ic_baseline_email_24
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_edit_text_07042022"
+                            app:boxStrokeColor="@color/white">
+
+                            <EditText
+                                android:id="@+id/txtNombre"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_edit_text_07042022"
+                                android:hint="Nombre" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgApe"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_person_24" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_edit_text_07042022"
+                            app:boxStrokeColor="@color/white">
+
+                            <EditText
+                                android:id="@+id/txtApellido"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/shape_edit_text_07042022"
+                                android:hint="Apellido" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgId"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+
+                             />
+                        <!-- android:src="@drawable/id"-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgMail"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_email_24" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_edit_text_07042022"
+                            app:boxStrokeColor="@color/white">
+
+                            <EditText
+                                android:id="@+id/txtCorreo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/shape_edit_text_07042022"
+                                android:hint="Correo"
+                                android:inputType="textEmailAddress" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgPass"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_lock_24" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_edit_text_07042022"
+                            app:passwordToggleEnabled="true">
+
+                            <EditText
+                                android:id="@+id/txtContrasena"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/shape_edit_text_07042022"
+                                android:hint="Contraseña"
+                                android:inputType="textWebPassword" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgPass2"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_lock_24" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_edit_text_07042022"
+                            app:passwordToggleEnabled="true">
+
+                            <EditText
+                                android:id="@+id/txtConfirmar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/shape_edit_text_07042022"
+                                android:hint="Confirmar Contraseña"
+                                android:inputType="textWebPassword" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    ic_baseline_lock_24
+                    <RelativeLayout
+                        android:id="@+id/scSpinners"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp">
+
+
+
+
+
+                    </RelativeLayout>
+
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/color_F3950D"
+                        android:gravity="center"
+                        android:text="Guardar"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/color_F3950D"
+                android:gravity="center"
+                android:text="Eliminar Perfil"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+
+
+</ScrollView>
+
+</RelativeLayout>
