@@ -19,7 +19,12 @@ private LayerDrawable imagen ;
         setContentView(R.layout.activity_main);
         //imagen =(LayerDrawable)findDrawableByLayerId(R.id.fot_1);
     ImageView  Imgane_persona = findViewById(R.id.Imgane_persona);
-
+        // Para usar el redonde de imagenes de debe ajustar lo siguiente
+        // Build gradle
+        //    implementation 'com.github.bumptech.glide:glide:4.8.0'
+        //    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+        //  gradle property ---->se debe agregar la siguiente line
+        //    android.enableJetifier = true
 
             Glide.with(getBaseContext()).load(R.drawable.guillermo).apply(RequestOptions.circleCropTransform()).into(Imgane_persona);
     }
